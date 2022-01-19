@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Grid: Fortgeschritten</title>
+    <link rel="stylesheet" href="/z-shared/reset.css">
+    <style>
+      body {
+        padding: 16px;
+        background: #CBD5E1;
+        color: #0F172A;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 40px 40px 40px;
+        grid-template-rows: 40px 40px 40px;
+        width: min-content;
+        margin-bottom: 16px;
+        background: #F8FAFC;
+      }
+
+      .red {
+        background: #EF4444;
+        opacity: 0.5;
+      }
+      .green {
+        background: #10B981;
+        opacity: 0.5;
+      }
+      .blue {
+        background: #3B82F6;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="red"></div>
+      <div class="green"></div>
+      <div class="blue" style="grid-area: -2/-2/span -3/span 1;"></div>
+    </div>
+
+    <!-- MDN: If four <grid-line> values are specified, grid-row-start is set to the first value, grid-column-start is set to the second value, grid-row-end is set to the third value, and grid-column-end is set to the fourth value-->
+    <!-- Explizit positionierte Grid-Kinder werden aus dem automatischen Fluss (von oben links bis unten rechts) herausgenommen-->
+    <div class="grid">
+      <div class="red" style="grid-area: 1/1/4/3;"></div>
+      <div class="green" style="grid-area: 1/1/2/2;"></div>
+      <div class="blue" style="grid-area: 2/2/4/4;"></div>
+    </div>
+
+    <div class="grid">
+      <div class="red" style="grid-area: 2/2/3/3;"></div>
+      <div class="green" style="grid-area: 1/1/-1/2;"></div>
+      <!--  Lässt du die Endwerte aus, nimmt das Element einfach eine Zelle in Anspruch-->
+      <div class="blue" style="grid-area: 3/3;"></div>
+    </div>
+  </body>
+</html>

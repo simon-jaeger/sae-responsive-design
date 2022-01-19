@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Media Queries und Adaptivität</title>
+    <link rel="stylesheet" href="/z-shared/reset.css">
+    <style>
+      body {
+        background: #0F172A;
+        color: #CBD5E1;
+        padding: 16px;
+      }
+      .headline {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 32px;
+      }
+
+      /* Starte eine Media Query mit @media und einer Bedingung in Klammern */
+      @media (min-width: 400px) {
+        /* Alle verschachtelten CSS-Regeln werden nur aktiv, wenn die Bedingung zutrifft */
+        .headline {
+          font-size: 48px;
+        }
+      }
+
+      /* Ergänze bliebig viele weitere Media Queries */
+      /* Eine gute Richtline ist 400px, 800px, 1200px */
+      @media (min-width: 800px) {
+        .headline {
+          font-size: 64px;
+          text-align: center;
+          text-decoration: underline;
+          padding-top: 24px;
+        }
+      }
+
+      /* Benutze alternativ max-width (desktop first) statt min-width (mobile first) */
+      /* NOTE: Was mehr Sinn macht hängt ab von Benutzerstatistiken, Anwendungszweck und persönlicher Präferenz. Teile der Klasse kurz mit, wozu du tendieren würdest. */
+      @media (max-width: 600px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="headline">A headline</div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aufgabe: Echtweltbeispiel</title>
+    <link rel="stylesheet" href="/z-shared/reset.css">
+    <style>
+      body {
+        padding: 16px;
+        background: #F1F5F9;
+        color: #0F172A;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .product {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        overflow: hidden;
+      }
+      .pdf {
+        width: 40px;
+        height: 40px;
+        background-image: url('pdf.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="product">
+      <img
+        src="https://via.placeholder.com/200x200"
+        alt="Product"
+      >
+      <div>
+        <h2>
+          <span>Some Fancy Jacket</span>
+          <span>$110.00</span>
+        </h2>
+        <div>
+          <button>XS</button>
+          <button>S</button>
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+        </div>
+        <div>
+          <button>Buy now</button>
+          <button>Infos</button>
+          <button class="pdf" title="Download PDF"></button>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>

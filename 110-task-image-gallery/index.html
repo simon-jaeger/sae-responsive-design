@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aufgabe: Bildergallery</title>
+    <link rel="stylesheet" href="/z-shared/reset.css">
+    <style>
+      /* NOTE: Binde eigene Bilder ein und positioniere sie in einem Grid */
+      /* Nutze Media Queries, um template-columns/rows je nach Bildschirm anders zu setzen */
+      body {
+        padding: 16px;
+        background: #F1F5F9;
+        color: #0F172A;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .gallery {
+        display: grid; /* Grid aktivieren, direkte Kinder landen im Raster */
+        row-gap: 16px; /* Abstand zwischen Zeilen */
+        column-gap: 16px;/* Abstand zwischen Spalten */
+      }
+
+      /* Folgender Trick passt die Kindelemente genau in ihre Zellen ein */
+      .gallery > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .gallery > div {
+        background-color: #CCCCCC;
+      }
+
+      @media (min-width: 400px) {
+        .gallery {
+          grid-template-columns: 1fr 1fr; /* Spalten, explizit (px) oder wachsend (fr) */
+          /*grid-template-rows: 10px 20px 30px;*/ /* Zeilen */
+          /*grid-auto-rows: 200px;*/ /* Automatische Zeilen mit dieser Höhe */
+        }
+      }
+      @media (min-width: 600px) {
+        .gallery {
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-auto-rows: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-size: 32px; font-weight: 700;">GRID</h1>
+    <p style="margin-bottom: 24px;">Suche ein paar Bilder zusammen und ordne sie
+      in einem responsiven Raster an.</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x400?text=A" alt="?">
+      <img src="https://via.placeholder.com/400x400?text=B" alt="?">
+      <img src="https://via.placeholder.com/400x400?text=C" alt="?">
+      <img src="https://via.placeholder.com/400x400?text=D" alt="?">
+      <img src="https://via.placeholder.com/400x400?text=E" alt="?">
+      <img src="https://via.placeholder.com/400x400?text=F" alt="?">
+    </div>
+  </body>
+</html>

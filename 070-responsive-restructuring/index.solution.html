@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Responsive Umstrukturierung</title>
+    <link rel="stylesheet" href="/z-shared/reset.css">
+    <style>
+      /* Nutze Media Queries in Kombination mit position, display etc. um Elemente je nach Bildschirmgrösse umzupositionieren und aus- oder einzublenden */
+      /* NOTE: Probiere selbst aus, [result.png] zu realisieren. Anschliessend sehen wir uns eine mögliche Lösung gemeinsam an. */
+      body {
+        background: #0F172A;
+        color: #CBD5E1;
+      }
+
+      .header {
+        position: sticky;
+        top: 0;
+        background: #334155;
+        height: 56px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+      }
+      .logo {
+        display: block;
+        background: url('logo.svg');
+        width: 20px;
+        height: 20px;
+        margin-right: auto;
+      }
+      .menu {
+        background: url('menu.svg');
+        width: 20px;
+        height: 20px;
+      }
+      .nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #1E293B;
+      }
+      .nav > a {
+        display: block;
+        text-align: right;
+        padding: 16px;
+      }
+
+      @media (min-width: 400px) {
+        .menu {
+          display: none;
+        }
+        .nav {
+          position: static;
+          background: transparent;
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo" title="Home"></a>
+      <!-- Die Navigation bei Klick zu öffnen ist dann die Aufgabe von JavaScript (mehr dazu in einem späteren Modul) -->
+      <button class="menu" title="Menu"></button>
+      <nav class="nav isOpen">
+        <a href="#">Product</a>
+        <a href="#">Features</a>
+        <a href="#">Login</a>
+      </nav>
+    </header>
+    <main style="padding: 32px; max-width: 480px; margin: 0 auto; color: #94A3B8;">
+      Duis a tellus nec ipsum cursus iaculis a ut ante. Praesent sapien arcu,
+      facilisis eget arcu sit amet, fermentum malesuada lectus. Quisque vel
+      rhoncus dolor. Ut egestas nulla a dolor consequat, egestas consectetur
+      enim mollis. In porta elementum sem id pretium. Mauris pellentesque, magna
+      sit amet aliquet suscipit, ligula nisl blandit sem, nec ornare nisl risus
+      a neque. Donec vitae nulla sagittis, fermentum dolor eu, aliquam quam.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia Curae. Sed fringilla orci vitae felis consequat pulvinar. Nullam
+      eget ex eget eros tincidunt ullamcorper. Maecenas iaculis, est consequat
+      pharetra accumsan, nibh eros venenatis eros, in vulputate dui sem vitae
+      elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+      posuere cubilia Curae. Vestibulum eu augue sem.
+      Duis a tellus nec ipsum cursus iaculis a ut ante. Praesent sapien arcu,
+      facilisis eget arcu sit amet, fermentum malesuada lectus. Quisque vel
+      rhoncus dolor. Ut egestas nulla a dolor consequat, egestas consectetur
+      enim mollis. In porta elementum sem id pretium. Mauris pellentesque, magna
+      sit amet aliquet suscipit, ligula nisl blandit sem, nec ornare nisl risus
+      a neque. Donec vitae nulla sagittis, fermentum dolor eu, aliquam quam.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia Curae. Sed fringilla orci vitae felis consequat pulvinar. Nullam
+      eget ex eget eros tincidunt ullamcorper. Maecenas iaculis, est consequat
+      pharetra accumsan, nibh eros venenatis eros, in vulputate dui sem vitae
+      elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+      posuere cubilia Curae. Vestibulum eu augue sem.
+      Duis a tellus nec ipsum cursus iaculis a ut ante. Praesent sapien arcu,
+      facilisis eget arcu sit amet, fermentum malesuada lectus. Quisque vel
+      rhoncus dolor. Ut egestas nulla a dolor consequat, egestas consectetur
+      enim mollis. In porta elementum sem id pretium. Mauris pellentesque, magna
+      sit amet aliquet suscipit, ligula nisl blandit sem, nec ornare nisl risus
+      a neque. Donec vitae nulla sagittis, fermentum dolor eu, aliquam quam.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia Curae. Sed fringilla orci vitae felis consequat pulvinar. Nullam
+      eget ex eget eros tincidunt ullamcorper. Maecenas iaculis, est consequat
+      pharetra accumsan, nibh eros venenatis eros, in vulputate dui sem vitae
+      elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+      posuere cubilia Curae. Vestibulum eu augue sem.
+      Duis a tellus nec ipsum cursus iaculis a ut ante. Praesent sapien arcu,
+      facilisis eget arcu sit amet, fermentum malesuada lectus. Quisque vel
+      rhoncus dolor. Ut egestas nulla a dolor consequat, egestas consectetur
+      enim mollis. In porta elementum sem id pretium. Mauris pellentesque, magna
+      sit amet aliquet suscipit, ligula nisl blandit sem, nec ornare nisl risus
+      a neque. Donec vitae nulla sagittis, fermentum dolor eu, aliquam quam.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+      cubilia Curae. Sed fringilla orci vitae felis consequat pulvinar. Nullam
+      eget ex eget eros tincidunt ullamcorper. Maecenas iaculis, est consequat
+      pharetra accumsan, nibh eros venenatis eros, in vulputate dui sem vitae
+      elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+      posuere cubilia Curae. Vestibulum eu augue sem.
+    </main>
+  </body>
+</html>

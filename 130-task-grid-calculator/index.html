@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Aufgabe: Rechner</title>
+    <link rel="stylesheet" href="/z-shared/reset.css">
+    <!--  JavaScript für die Logik – keine Sorge, du musst das noch nicht verstehen-->
+    <script src="script.js" defer></script>
+    <style>
+      /* NOTE: Nutze CSS-Grid um den Rechner schöner darzustellen wie in [result.png] */
+      body {
+        background: #000000;
+        color: #F1F5F9;
+        padding: 32px;
+      }
+      .calculator {
+      }
+      .calculator > input {
+        background: #E2E8F0;
+        color: #334155;
+        text-align: right;
+        padding: 16px;
+        font-size: 32px;
+        font-family: monospace;
+      }
+      .calculator > button {
+        background: #334155;
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="calculator">
+      <input aria-label="Display" placeholder="0">
+
+      <button style="background: #1E293B;">C</button>
+      <button style="background: #1E293B;">*</button>
+      <button style="background: #1E293B;">/</button>
+
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button style="background: #1E293B;">-</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button style="background: #1E293B;">+</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button style="background: #D97706;">=</button>
+
+      <button>0</button>
+      <button>.</button>
+    </article>
+  </body>
+</html>
